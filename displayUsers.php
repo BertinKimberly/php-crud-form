@@ -11,11 +11,8 @@
     <?php
       include 'connection.php';
     ?>
-
-
   <a href="signup.html" class="btn btn-primary m-5">  Add user </a>
-
-
+  <a href="PHP-to-PDF/index.php"><span class='btn btn-success'>PDF</span></a>
 <table class="table">
   <thead>
     <tr>
@@ -23,7 +20,6 @@
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
       <th scope="col">Gender</th>
       <th scope="col">Action</th>
     </tr>
@@ -40,7 +36,6 @@
             $fname=$row['fname'];
             $lname=$row['lname'];
             $email=$row['email'];
-            $password=$row['password'];
             $gender=$row['gender'];
 
             echo '
@@ -49,7 +44,6 @@
                 <td>'.$fname.'</td>
                 <td>'.$lname.'</td>
                 <td>'.$email.'</td>
-                <td>'.$password.'</td>
                 <td>'.$gender.'</td>
                 <td>
                     <a href="editUser.php?id='.$id.'" class="btn btn-primary btn-sm">Edit</a>
@@ -59,9 +53,7 @@
         }
     }
 ?>
-
 </table>
-    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
