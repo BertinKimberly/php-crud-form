@@ -10,6 +10,6 @@
     die("failled to connect to database" . mysqli_connect_error());
  }
  else{
-   //  echo "connected to the database successfully <br><br>";
+    //echo "connected to the database successfully <br><br>";
  }
 ?>

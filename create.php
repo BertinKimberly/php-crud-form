@@ -5,10 +5,10 @@ if(isset($_POST['submit'])){
    $firstname=$_POST['fname'];
    $lastname=$_POST['lname'];
    $email=$_POST['email'];
-   $password=$_POST['password'];
+   $password=Md5($_POST['password']);
    $gender=$_POST['gender'];
 
-   $sql= "INSERT INTO users(fname,lname,email,password,gender) VALUES ('$firstname','$lastname', '$email','password','$gender')";
+   $sql= "INSERT INTO users(fname,lname,email,password,gender) VALUES ('$firstname','$lastname', '$email','$password','$gender')";
 
    $result=$conn->query($sql);
 
